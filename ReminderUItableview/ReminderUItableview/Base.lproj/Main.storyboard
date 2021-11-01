@@ -48,6 +48,9 @@
                                 <rect key="frame" x="140" y="545" width="135" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                <connections>
+                                    <action selector="onAddEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wt7-kb-72Y"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xml-i7-Wi6">
                                 <rect key="frame" x="95" y="257.5" width="224" height="20.5"/>
@@ -80,6 +83,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0Ze-NG-3LP"/>
+                    <connections>
+                        <outlet property="eventTitle" destination="WVb-AA-wuD" id="k9b-cP-Bpk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="370" y="483"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Add Task View Controller-->
         <scene sceneID="DUG-Ki-jS1">
             <objects>
-                <tabBarController id="BAE-OB-LVS" sceneMemberID="viewController">
+                <tabBarController id="BAE-OB-LVS" customClass="AddTaskViewController" customModule="ReminderUItableview" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dCQ-eY-Nft"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ap-oN-OGL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

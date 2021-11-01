@@ -4,20 +4,36 @@ struct Event {
     
     var Title : String = ""
     var Time: String = ""
-    var image: UIImage?
+    var imageEvent: UIImage?
 }
 
 
 
 class RyadhTableViewController: UITableViewController {
 
+//    func addNewEvent(title: String) {
+//        let eventNew = Event(Title: title, Time: "5:00", imageEvent: nil)
+//        item.append(eventNew)
+//        tableView.reloadData()
+//    }
+//
+
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let titleFromDefaults = UserDefaults.standard.string(forKey: "title") {
+            let eventNew = Event(Title: titleFromDefaults, Time: "5:00", imageEvent: nil)
+            item.append(eventNew)
+            tableView.reloadData()
+        }
+
+    }
     
     var item:[Event] = [
-                        Event (Title: "Zombie motel Compan Field", Time: "oct - Apri 23 - 1", image: UIImage(named: "Event1")),
+                        Event (Title: "Zombie motel Compan Field", Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event1")),
                           
-                        Event (Title: "Rage cage",  Time: "1oct - Apri 23 - 1", image: UIImage(named: "Event2")),
+                        Event (Title: "Rage cage",  Time: "1oct - Apri 23 - 1", imageEvent: UIImage(named: "Event2")),
                           
-                          Event (Title: "Shooting",  Time: "oct - Apri 23 - 1", image: UIImage(named: "Event3")),
+                          Event (Title: "Shooting",  Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event3")),
 
     ]
     
@@ -29,7 +45,7 @@ class RyadhTableViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "EventCell", bundle: nil), forCellReuseIdentifier: "RiyadhEvent")
         
-        tableView.rowHeight = 120
+        tableView.rowHeight = 220
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,7 +69,15 @@ class RyadhTableViewController: UITableViewController {
             return item.count
         }
     }
-
+    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == UITableViewCell.EditingStyle.delete {
+//               item.remove(at: indexPath.row)
+//               tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+//           }
+//    }
+    
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -68,8 +92,8 @@ class RyadhTableViewController: UITableViewController {
 
             cell.Title.text = item[indexPath.row].Title
             cell.Time.text = item[indexPath.row].Time
-//            cell.image = (item[indexPath.row].image)
-//            cell.Eventimage.image = (item[indexPath.row].image)
+            cell.imageEvent.image = (item[indexPath.row].imageEvent)
+    
             
             return cell
         }
