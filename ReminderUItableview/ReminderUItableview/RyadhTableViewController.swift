@@ -1,12 +1,17 @@
 import UIKit
 
-struct Event {
+class Event {
     
     var Title : String = ""
     var Time: String = ""
     var imageEvent: UIImage?
+    
+    init(Title: String, Time: String, imageEvent: UIImage? = nil) {
+        self.Title = Title
+        self.Time = Time
+        self.imageEvent = imageEvent
+    }
 }
-
 
 
 class RyadhTableViewController: UITableViewController {
@@ -19,14 +24,14 @@ class RyadhTableViewController: UITableViewController {
 //
 
     override func viewDidAppear(_ animated: Bool) {
-//        let   timeFromDefaults = UserDefaults.standard.String(forKey: "time")
-        if let titleFromDefaults = UserDefaults.standard.string(forKey: "title"){
-            let eventNew = Event(Title: titleFromDefaults, Time: titleFromDefaults , imageEvent: nil)
+
+        if let timeFromDefaults = UserDefaults.standard.string(forKey: "time"),
+           let titleFromDefaults = UserDefaults.standard.string(forKey: "title"){
+            let eventNew = Event(Title: titleFromDefaults, Time: timeFromDefaults , imageEvent: nil)
             item.append(eventNew)
             tableView.reloadData()
         
         }
-
     }
     
     var item:[Event] = [
@@ -100,6 +105,20 @@ class RyadhTableViewController: UITableViewController {
             return cell
         }
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+               item.remove(at: indexPath.row)
+               tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+           }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        item[indexPath.row].Time
+    }
+    
 }
 
     /*

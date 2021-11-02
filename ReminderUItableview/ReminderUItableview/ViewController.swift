@@ -13,8 +13,9 @@ class ViewController: UIViewController {
         
         if let titleInfo = eventTitle.text {
             UserDefaults.standard.set(titleInfo, forKey: "title")
-            
-        } else if let timeInfo = eventTime.text {
+        }
+        
+        if let timeInfo = eventTime.text {
             UserDefaults.standard.set(timeInfo, forKey: "time")
         }
     }
