@@ -19,21 +19,22 @@ class RyadhTableViewController: UITableViewController {
 //
 
     override func viewDidAppear(_ animated: Bool) {
-        
-        if let titleFromDefaults = UserDefaults.standard.string(forKey: "title") {
-            let eventNew = Event(Title: titleFromDefaults, Time: "5:00", imageEvent: nil)
+//        let   timeFromDefaults = UserDefaults.standard.String(forKey: "time")
+        if let titleFromDefaults = UserDefaults.standard.string(forKey: "title"){
+            let eventNew = Event(Title: titleFromDefaults, Time: titleFromDefaults , imageEvent: nil)
             item.append(eventNew)
             tableView.reloadData()
+        
         }
 
     }
     
     var item:[Event] = [
-                        Event (Title: "Zombie motel Compan Field", Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event1")),
+                        Event (Title: "Zombie motel Compan Field", Time: "2 oct - Apri 14", imageEvent: UIImage(named: "Event1")),
                           
-                        Event (Title: "Rage cage",  Time: "1oct - Apri 23 - 1", imageEvent: UIImage(named: "Event2")),
+                        Event (Title: "Rage cage",  Time: "1oct - Apri 23", imageEvent: UIImage(named: "Event2")),
                           
-                          Event (Title: "Shooting",  Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event3")),
+                          Event (Title: "Shooting",  Time: "3oct - Apri 20", imageEvent: UIImage(named: "Event3")),
 
     ]
     
@@ -59,6 +60,7 @@ class RyadhTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 2
     }
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
