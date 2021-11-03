@@ -17,7 +17,9 @@ class AddTaskViewController: UITabBarController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        print (segue.destination.restorationIdentifier)
+      //  print (
+            segue.destination.restorationIdentifier
+        //)
         
     }
 
