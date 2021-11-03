@@ -13,20 +13,39 @@ class Event {
     }
 }
 
-class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddNewDelegate {
+    
+    func addNew(event: Event) {
+        item.append(event)
+        tableView.reloadData()
+    }
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textTime: UITextField!
     var curIndex = 0
    
+//    var item = [Event]()
+//
+//
+////    let e1 = Event(Title: "Zombie motel Compan Field", Time: "2 oct - Apri 14", imageEvent: UIImage(named: "Event1"))
+////
+////    let e2 = Event(Title: "Shooting",  Time: "3oct - Apri 20", imageEvent: UIImage(named: "Event3"))
+////
+////    let e3 = Event(Title: "Rage cage",  Time: "1oct - Apri 23", imageEvent: UIImage(named: "Event2"))
+//
+//    let newEvent = Event(Title: "adfd", Time: "3453", imageEvent: nil)
+//    item.append(newEvent)
+////    item.append(e1)
+////    item.append(e2)
+////    item.append(e3)
+    
     var item:[Event] = [
-                        Event (Title: "Zombie motel Compan Field", Time: "2 oct - Apri 14", imageEvent: UIImage(named: "Event1")),
-                          
-                        Event (Title: "Rage cage",  Time: "1oct - Apri 23", imageEvent: UIImage(named: "Event2")),
-                          
-                          Event (Title: "Shooting",  Time: "3oct - Apri 20", imageEvent: UIImage(named: "Event3")),
-                        
-                        Event (Title: "Bow and Arrow",  Time: "3oct - Apri 20", imageEvent: UIImage(named: "Event3"))
+                        Event (Title: "Zombie motel Compan Field", Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event1")),
+
+                        Event (Title: "Rage cage",  Time: "1oct - Apri 23 - 1", imageEvent: UIImage(named: "Event2")),
+
+                          Event (Title: "Shooting",  Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event3")),
+
     ]
     
     @IBAction func onUpdateTime(_ sender: Any) {
@@ -34,7 +53,7 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
             item[curIndex].Time = time
             tableView.reloadData()
         }
-        UserDefaults.standard.set(item,forKey: "item")
+//        UserDefaults.standard.set(item, forKey: "item")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,10 +63,11 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let usrDefaults =  UserDefaults.standard.object(forKey: "item") as? [Event]{
-            item = usrDefaults
-        }
+// user defolt
+//
+//        if let usrDefaults =  UserDefaults.standard.object(forKey: "item") as? [Event]{
+//            item = usrDefaults
+//        }
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -55,9 +75,6 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         tableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "RiyadhBanner")
         tableView.register(UINib(nibName: "EventCell", bundle: nil), forCellReuseIdentifier: "RiyadhEvent")
-        
-        let addVC = tabBarController?.viewControllers![1] as! ViewController
-        addVC.item = self.item
         
     }
 
@@ -115,3 +132,5 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
         // Pass the selected object to the new view controller.
     }
     */
+
+

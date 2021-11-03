@@ -1,5 +1,9 @@
 import UIKit
 
+protocol AddNewDelegate {
+    func addNew(event: Event)
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var eventTitle: UITextField!
@@ -7,11 +11,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var eventImage: UIImageView!
     
+    var delegate: AddNewDelegate!
+    
     var item = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func choosImage(_ sender: Any) {
@@ -25,9 +30,7 @@ class ViewController: UIViewController {
     @IBAction func onAddEvent(_ sender: Any) {
 
         let newEvent = Event(Title: eventTitle.text ?? "", Time: eventTime.text ?? "", imageEvent: eventImage.image)
-        item.append(newEvent)
-        print (item.count)
-    
+        delegate.addNew(event: newEvent)
     }
 }
 

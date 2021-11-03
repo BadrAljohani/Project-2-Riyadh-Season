@@ -74,6 +74,7 @@ make a list by the event you want to vist</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="XwJ-Ml-8Ya"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add"/>
                                 <connections>
@@ -92,8 +93,7 @@ make a list by the event you want to vist</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="choose a photo"/>
                                 <connections>
-                                    <action selector="choosImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CrI-Na-blv"/>
-                                    <action selector="onAddEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v4y-DV-Ejw"/>
+                                    <action selector="choosImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vV-IC-vpw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -236,6 +236,9 @@ make a list by the event you want to vist</string>
     <resources>
         <image name="AddEventPage" width="1000" height="724"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
