@@ -27,4 +27,4 @@
 * Add a new item to a list
 * Update an item from a list
 * Remove an item from a list
-* Clear/delete all items OR Clear/delete only marked items
+* Delete only marked items
