@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "85F09D4E272E7F5F00AE7147"
                BuildableName = "ReminderUItableview.app"
-               BlueprintName = "ReminderUItableview"
-               ReferencedContainer = "container:ReminderUItableview.xcodeproj">
+               BlueprintName = "RiyadhSeason"
+               ReferencedContainer = "container:RiyadhSeason.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,8 +46,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "85F09D4E272E7F5F00AE7147"
             BuildableName = "ReminderUItableview.app"
-            BlueprintName = "ReminderUItableview"
-            ReferencedContainer = "container:ReminderUItableview.xcodeproj">
+            BlueprintName = "RiyadhSeason"
+            ReferencedContainer = "container:RiyadhSeason.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "85F09D4E272E7F5F00AE7147"
             BuildableName = "ReminderUItableview.app"
-            BlueprintName = "ReminderUItableview"
-            ReferencedContainer = "container:ReminderUItableview.xcodeproj">
+            BlueprintName = "RiyadhSeason"
+            ReferencedContainer = "container:RiyadhSeason.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

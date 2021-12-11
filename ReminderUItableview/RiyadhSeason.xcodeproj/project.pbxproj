@@ -28,7 +28,7 @@
 		858427C9272F22F50043658E /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		858427CA272F22F50043658E /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
 		858427CD272F24D30043658E /* RyadhTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyadhTableViewController.swift; sourceTree = "<group>"; };
-		85F09D4F272E7F5F00AE7147 /* ReminderUItableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderUItableview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F09D4F272E7F5F00AE7147 /* RiyadhSeason.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiyadhSeason.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F09D52272E7F5F00AE7147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F09D54272E7F5F00AE7147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		85F09D56272E7F5F00AE7147 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		85F09D50272E7F5F00AE7147 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85F09D4F272E7F5F00AE7147 /* ReminderUItableview.app */,
+				85F09D4F272E7F5F00AE7147 /* RiyadhSeason.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85F09D4E272E7F5F00AE7147 /* ReminderUItableview */ = {
+		85F09D4E272E7F5F00AE7147 /* RiyadhSeason */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85F09D63272E7F6E00AE7147 /* Build configuration list for PBXNativeTarget "ReminderUItableview" */;
+			buildConfigurationList = 85F09D63272E7F6E00AE7147 /* Build configuration list for PBXNativeTarget "RiyadhSeason" */;
 			buildPhases = (
 				85F09D4B272E7F5F00AE7147 /* Sources */,
 				85F09D4C272E7F5F00AE7147 /* Frameworks */,
@@ -103,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = ReminderUItableview;
+			name = RiyadhSeason;
 			productName = ReminderUItableview;
-			productReference = 85F09D4F272E7F5F00AE7147 /* ReminderUItableview.app */;
+			productReference = 85F09D4F272E7F5F00AE7147 /* RiyadhSeason.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -123,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 85F09D4A272E7F5F00AE7147 /* Build configuration list for PBXProject "ReminderUItableview" */;
+			buildConfigurationList = 85F09D4A272E7F5F00AE7147 /* Build configuration list for PBXProject "RiyadhSeason" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85F09D4E272E7F5F00AE7147 /* ReminderUItableview */,
+				85F09D4E272E7F5F00AE7147 /* RiyadhSeason */,
 			);
 		};
 /* End PBXProject section */
@@ -367,7 +367,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85F09D4A272E7F5F00AE7147 /* Build configuration list for PBXProject "ReminderUItableview" */ = {
+		85F09D4A272E7F5F00AE7147 /* Build configuration list for PBXProject "RiyadhSeason" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85F09D61272E7F6E00AE7147 /* Debug */,
@@ -376,7 +376,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85F09D63272E7F6E00AE7147 /* Build configuration list for PBXNativeTarget "ReminderUItableview" */ = {
+		85F09D63272E7F6E00AE7147 /* Build configuration list for PBXNativeTarget "RiyadhSeason" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85F09D64272E7F6E00AE7147 /* Debug */,
