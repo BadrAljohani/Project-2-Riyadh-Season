@@ -19,41 +19,26 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
         item.append(event)
         tableView.reloadData()
     }
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textTime: UITextField!
     var curIndex = 0
-   
-//    var item = [Event]()
-//
-//
-////    let e1 = Event(Title: "Zombie motel Compan Field", Time: "2 oct - Apri 14", imageEvent: UIImage(named: "Event1"))
-////
-////    let e2 = Event(Title: "Shooting",  Time: "3oct - Apri 20", imageEvent: UIImage(named: "Event3"))
-////
-////    let e3 = Event(Title: "Rage cage",  Time: "1oct - Apri 23", imageEvent: UIImage(named: "Event2"))
-//
-//    let newEvent = Event(Title: "adfd", Time: "3453", imageEvent: nil)
-//    item.append(newEvent)
-////    item.append(e1)
-////    item.append(e2)
-////    item.append(e3)
-    
+                            // MARK: - Event array
     var item:[Event] = [
-                        Event (Title: "Zombie motel Compan Field", Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event1")),
-
-                        Event (Title: "Rage cage",  Time: "1oct - Apri 23 - 1", imageEvent: UIImage(named: "Event2")),
-
-                          Event (Title: "Shooting",  Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event3")),
-
+        Event (Title: "Zombie motel Compan Field", Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event1")),
+        
+        Event (Title: "Rage cage",  Time: "1oct - Apri 23 - 1", imageEvent: UIImage(named: "Event2")),
+        
+        Event (Title: "Shooting",  Time: "oct - Apri 23 - 1", imageEvent: UIImage(named: "Event3")),
+        
     ]
-    
+                            // MARK: - Update
     @IBAction func onUpdateTime(_ sender: Any) {
         if let time = textTime.text {
             item[curIndex].Time = time
             tableView.reloadData()
         }
-//        UserDefaults.standard.set(item, forKey: "item")
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,11 +48,7 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-// user defolt
-//
-//        if let usrDefaults =  UserDefaults.standard.object(forKey: "item") as? [Event]{
-//            item = usrDefaults
-//        }
+        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -77,16 +58,16 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.register(UINib(nibName: "EventCell", bundle: nil), forCellReuseIdentifier: "RiyadhEvent")
         
     }
-
-    // MARK: - Table view data source
-
+    
+                        // MARK: - Table view data source
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 2
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         if section == 0 {
             return 1
         } else {
@@ -95,7 +76,7 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RiyadhBanner", for: indexPath) as! BannerCell
             return cell
@@ -110,9 +91,9 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-               item.remove(at: indexPath.row)
-               tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-           }
+            item.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -121,16 +102,3 @@ class RyadhTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
 }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-

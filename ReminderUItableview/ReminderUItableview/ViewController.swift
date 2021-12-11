@@ -5,7 +5,7 @@ protocol AddNewDelegate {
 }
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var eventTitle: UITextField!
     @IBOutlet weak var eventTime: UITextField!
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+                    // MARK: - choosimage from library
     @IBAction func choosImage(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
@@ -28,14 +28,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onAddEvent(_ sender: Any) {
-
+        
         let newEvent = Event(Title: eventTitle.text ?? "", Time: eventTime.text ?? "", imageEvent: eventImage.image)
         delegate.addNew(event: newEvent)
     }
 }
 
 extension ViewController:UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
